@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Rock Paper Scissors</title>
+    </head>
+
+    <body>
+        <script>
+
+            function computerPlay() {
+                let play = Math.round(Math.random() * 2); 
+                
+                switch (play) {
+                    case 0:
+                        return "rock";
+                    case 1:
+                        return "paper";
+                    case 2:
+                        return "scissors";
+                    default:
+                        return "Error in computerPlay";
+                }
+            }
+
+            function playerPlay() {
+
+                while(true) {
+                    let play = prompt("Please make a choice: rock, paper, scissors. \nNote: case insenstive.").toLowerCase();
+                    if (play === "rock" || play === "paper" || play === "scissors") {
+                        return play;
+                    }
+                    alert("Please enter a correct choice");
+                }
+            }
+
+            function playRound(playerSelection, computerSelection) {
+                if ((playerSelection === "rock" && computerSelection === "scissors") ||
+                    (playerSelection === "paper" && computerSelection === "rock") ||
+                    (playerSelection === "scissors" && computerSelection === "paper")
+                    ) {
+
+                    console.log("You win! " + playerSelection + " beats " + computerSelection + "!");
+
+                } else if ((playerSelection === "rock" && computerSelection === "paper") ||
+                    (playerSelection === "paper" && computerSelection === "scissors") ||
+                    (playerSelection === "scissors" && computerSelection === "rock")
+                    ) {
+
+                    console.log("You lose. " + computerSelection + " beats " + playerSelection + ".");
+
+                } else {
+
+                    console.log("It's a tie.  You both picked " + playerSelection);
+
+                }
+            }
+
+            function playGame() {
+                for (i=0; i<5; i++) {
+                    playRound(playerPlay(), computerPlay());
+                }
+            }
+
+            playGame();
+
+        </script>
+    </body>
+</html>

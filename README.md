@@ -1,0 +1,3 @@
+This is my submission for PROJECT: ROCK PAPER SCISSORS from the Web Development 101 course, section "JavaScript Basics" by The Odin Project (https://www.theodinproject.com/).
+
+In this script I have a simple rock paper scissors game that takes case-insensitive input (rock, paper, or scissors) from the user and randomly generates a choice for the computer player.  If the player enters invalid input, the script will alert and ask again.  It loops over 5 times as per the course instruction.  
