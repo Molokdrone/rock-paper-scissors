@@ -8,7 +8,7 @@
         <script>
 
             function computerPlay() {
-                let play = Math.round(Math.random() * 2); 
+                let play = Math.round(Math.random() * 2);
                 
                 switch (play) {
                     case 0:
@@ -18,7 +18,8 @@
                     case 2:
                         return "scissors";
                     default:
-                        return "Error in computerPlay";
+                        console.log("Error in computerPlay()");
+                        break;
                 }
             }
 
@@ -49,7 +50,7 @@
 
                 } else {
 
-                    return "It's a tie.  You both picked " + playerSelection;
+                    return "It's a tie.  You both picked " + computerSelection;
 
                 }
             }
