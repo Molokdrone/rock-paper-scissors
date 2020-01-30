@@ -23,7 +23,6 @@
             }
 
             function playerPlay() {
-
                 while(true) {
                     let play = prompt("Please make a choice: rock, paper, scissors. \nNote: case insenstive.").toLowerCase();
                     if (play === "rock" || play === "paper" || play === "scissors") {
@@ -39,25 +38,25 @@
                     (playerSelection === "scissors" && computerSelection === "paper")
                     ) {
 
-                    console.log("You win! " + playerSelection + " beats " + computerSelection + "!");
+                    return "You win! " + playerSelection + " beats " + computerSelection + "!";
 
                 } else if ((playerSelection === "rock" && computerSelection === "paper") ||
                     (playerSelection === "paper" && computerSelection === "scissors") ||
                     (playerSelection === "scissors" && computerSelection === "rock")
                     ) {
 
-                    console.log("You lose. " + computerSelection + " beats " + playerSelection + ".");
+                    return "You lose. " + computerSelection + " beats " + playerSelection + ".";
 
                 } else {
 
-                    console.log("It's a tie.  You both picked " + playerSelection);
+                    return "It's a tie.  You both picked " + playerSelection;
 
                 }
             }
 
             function playGame() {
                 for (i=0; i<5; i++) {
-                    playRound(playerPlay(), computerPlay());
+                    console.log(playRound(playerPlay(), computerPlay()));
                 }
             }
 
